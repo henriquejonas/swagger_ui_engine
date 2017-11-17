@@ -25,6 +25,6 @@ Gem::Specification.new do |s|
   s.required_ruby_version     = '>= 1.9.3'
   s.required_rubygems_version = '>= 1.8.11'
 
-  s.add_runtime_dependency 'rails', '~> 5.0', '>= 5.0.0'
+  s.add_runtime_dependency 'rails', '>= 4.2'
   s.add_runtime_dependency 'sass-rails'
 end
