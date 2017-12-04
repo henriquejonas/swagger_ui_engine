@@ -17,6 +17,7 @@ module SwaggerUiEngine
       swagger_url
       translator_enabled
       validator_enabled
+      api_application_url
     ).freeze
 
     attr_accessor(*OPTIONS)

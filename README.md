@@ -110,6 +110,7 @@ config.request_headers | showRequestHeaders | Whether or not to show the headers
 config.json_editor | jsonEditor | Enables a graphical view for editing complex bodies.  Defaults to `false`.
 config.translator_enabled | translations | Enables Swagger Ui translations. Defaults to `false`.
 config.validator_enabled | validatorUrl | Enables documentation validator.  Defaults to `false` (`validatorUrl: 'null'`).
+config.api_application_url | none | Customize the api base url endpoint (for oauth2 redirections)
 
 #### OAuth2 configuration
 You can configure OAuth2 default authorization.
