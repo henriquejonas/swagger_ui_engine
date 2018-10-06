@@ -1,6 +1,6 @@
 # SwaggerUiEngine
 
-Include [swagger-ui](https://github.com/swagger-api/swagger-ui) as Rails engine and document your API with simple YAML files. 
+Include [swagger-ui](https://github.com/swagger-api/swagger-ui) as Rails engine and document your API with simple YAML files.
 
 [![Gem Version](https://badge.fury.io/rb/swagger_ui_engine.svg)](https://badge.fury.io/rb/swagger_ui_engine) [![Build Status](https://travis-ci.org/zuzannast/swagger_ui_engine.svg?branch=master)](https://travis-ci.org/zuzannast/swagger_ui_engine) [![Code Climate](https://codeclimate.com/github/zuzannast/swagger_ui_engine/badges/gpa.svg)](https://codeclimate.com/github/zuzannast/swagger_ui_engine)
 
@@ -8,7 +8,7 @@ Include [swagger-ui](https://github.com/swagger-api/swagger-ui) as Rails engine 
 
 Swagger UI version | Rails version
 ------------------ | ----------------
-2.2.10             | >= 5.0.0
+2.2.10             | >= 4.2
 
 ## Features
 * Supports API documentation versioning / multiple APIs documentation
@@ -103,7 +103,7 @@ end
 ### Configure
 Config Name | Swagger parameter name | Description
 --- | --- | ---
-config.swagger_url | url | The url pointing `swagger.yaml` (Swagger 2.0) as per [OpenAPI Spec](https://github.com/OAI/OpenAPI-Specification/). This params requires hash value - pass your API doc version name as a key and it's main documentation url as a value.
+config.swagger_url | url | The url pointing `swagger.yaml` (Swagger 2.0) as per [OpenAPI Spec](https://github.com/OAI/OpenAPI-Specification/). Accepts a Hash, with API version names as keys and documentation URLs as values. Also accepts a String pointing to documentation for all versions.
 config.doc_expansion | docExpansion | Controls how the API listing is displayed. It can be set to 'none' (default), 'list' (shows operations for each resource), or 'full' (fully expanded: shows operations and their details).
 config.model_rendering | defaultModelRendering | Controls how models are shown when the API is first rendered. It can be set to 'model' or 'schema', and the default is 'schema'.
 config.request_headers | showRequestHeaders | Whether or not to show the headers that were sent when making a request via the 'Try it out!' option. Defaults to `false`.
@@ -119,8 +119,8 @@ Config Name | Swagger parameter name | Description
 --- | --- | ---
 config.oauth_client_id | client_id | Default clientId. MUST be a string
 config.oauth_client_secret | client_secret | Default clientSecret. MUST be a string
-config.oauth_client_realm | realm | realm query parameter (for oauth1) added to `authorizationUrl` and `tokenUrl` . MUST be a string
-config.oauth_client_app_name | appName | application name, displayed in authorization popup. MUST be a string
+config.oauth_realm | realm | realm query parameter (for oauth1) added to `authorizationUrl` and `tokenUrl` . MUST be a string
+config.oauth_app_name | appName | application name, displayed in authorization popup. MUST be a string
 config.oauth_scope_separator | scopeSeparator | scope separator for passing scopes, encoded before calling, default value is a space (encoded value `%20`). MUST be a string
 config.oauth_query_string_params | additionalQueryStringParams | Additional query parameters added to `authorizationUrl` and `tokenUrl`. MUST be an object
 
@@ -131,6 +131,10 @@ You can use [Swagger editor](https://github.com/swagger-api/swagger-editor) to w
 ## Example app
 
 Here's an example use of [SwaggerUiEngine in Rails application](https://github.com/zuzannast/swagger_ui_engine_example).
+
+## Contributing
+
+You're very much welcome to contribute to this repository. Start by creating a Github issue and describing your change thoroughly. If you decide to publish a pull request, please make sure it points to the latest versioned branch instead of master. 
 
 ## License
 
